@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import Editor from '@monaco-editor/react';
 import * as Y from 'yjs';
-// import { WebrtcProvider } from 'y-webrtc';
 import { WebsocketProvider } from 'y-websocket';
 import { MonacoBinding } from 'y-monaco';
 
@@ -12,7 +11,7 @@ function App() {
     editorRef.current = editor;
 
     const doc = new Y.Doc();
-    // const provider = new WebrtcProvider('room-name', doc);
+    // const provider = new WebsocketProvider('ws://localhost:1234', 'monaco-demo', doc);
     const provider = new WebsocketProvider('wss://demos.yjs.dev', 'monaco-demo', doc);
     const type = doc.getText('monaco');
 
