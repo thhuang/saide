@@ -11,8 +11,8 @@ function App() {
     editorRef.current = editor;
 
     const doc = new Y.Doc();
-    // const provider = new WebsocketProvider('ws://localhost:1234', 'monaco-demo', doc);
-    const provider = new WebsocketProvider('wss://demos.yjs.dev', 'monaco-demo', doc);
+    // const provider = new WebsocketProvider('wss://demos.yjs.dev', 'monaco-demo', doc);
+    const provider = new WebsocketProvider('ws://127.0.0.1:13701', 'monaco-demo', doc);
     const type = doc.getText('monaco');
 
     new MonacoBinding(
