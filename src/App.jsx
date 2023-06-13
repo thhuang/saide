@@ -28,7 +28,10 @@ function Landing() {
         Super Awesome IDE
       </h1>
       <div className="flex flex-row gap-x-2">
-        <a className="btn btn-primary" onClick={() => navigate('/editor')}>
+        <a
+          className="btn btn-primary"
+          href="http://localhost:8080/oauth2/authorization/github"
+        >
           Login
         </a>
         <a className="btn" onClick={() => navigate('/editor')}>
