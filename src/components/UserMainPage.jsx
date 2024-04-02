@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import Menu from "./Menu";
+import SideMenu from "./SideMenu";
 
 const files = {
     children: [
@@ -27,7 +27,7 @@ export default function UserMainPage() {
     return (
         <div>
             <Navbar />
-            <Menu items={files} />
+            <SideMenu items={files} />
         </div>
     )
 }
