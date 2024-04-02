@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 import Editor from './components/Editor';
+import UserMainPage from './components/UserMainPage';
 
 const queryClient = new QueryClient();
 
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/editor" element={<Editor />} />
+          <Route path="/usermainpage" element={<UserMainPage />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
@@ -30,7 +32,8 @@ function Landing() {
       <div className="flex flex-row gap-x-2">
         <a
           className="btn btn-primary"
-          href="http://localhost:8080/oauth2/authorization/github"
+          // href="http://localhost:8080/oauth2/authorization/github"
+          onClick={() => navigate('/usermainpage')}
         >
           Login
         </a>
