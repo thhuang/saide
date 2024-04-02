@@ -19,17 +19,15 @@ const files = {
                 }
             ]
         },
-        {name: "package.json"}
+        { name: "package.json" }
     ]
 }
 
 export default function UserMainPage() {
     return (
-    <div>
-        <div><Navbar /></div>
         <div>
-            <Menu items={files}/>
+            <Navbar />
+            <Menu items={files} />
         </div>
-    </div>
     )
 }

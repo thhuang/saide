@@ -4,7 +4,7 @@ export default function Navbar() {
     const navigate = useNavigate();
 
     return (
-        <nav class="z-50" border="gray">
+        <nav class="z-50 bg-slate-800 border-b border-b-zinc-700">
             <div className="h-10vh flex lg:py-5 px-10 py-20">
                 <div className="flex items-center flex-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
