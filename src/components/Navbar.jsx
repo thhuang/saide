@@ -1,12 +1,18 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Navbar() {
+    const navigate = useNavigate();
+
     return (
-        <nav class="z-50 bg-slate-800">
-            <div className="h-10vh flex justify-between lg:py-5 px-20 py-20">
+        <nav class="z-50" border="gray">
+            <div className="h-10vh flex lg:py-5 px-10 py-20">
                 <div className="flex items-center flex-1">
-                    Logo
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
                 </div>
                 <div>
-                    <ul className="flex gap-8 mr-16 text-[18px]">
+                    <ul className="flex gap-8">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                         </svg>
