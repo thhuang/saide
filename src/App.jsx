@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/editor" element={<Editor />} />
-          <Route path="/usermainpage" element={<UserMainPage />} />
+          <Route path="/main" element={<UserMainPage />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
@@ -33,7 +33,7 @@ function Landing() {
         <a
           className="btn btn-primary"
           // href="http://localhost:8080/oauth2/authorization/github"
-          onClick={() => navigate('/usermainpage')}
+          onClick={() => navigate('/main')}
         >
           Login
         </a>
