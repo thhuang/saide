@@ -1,4 +1,3 @@
-// import '../../index.css'
 import React from 'react'
 import { ClientOnly } from './client'
 
