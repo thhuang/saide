@@ -2,12 +2,12 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-import Editor from './components/Editor';
-import UserMainPage from './components/UserMainPage';
+import Editor from './src/components/Editor';
+import UserMainPage from './src/components/UserMainPage';
 
 const queryClient = new QueryClient();
 
-function App() {
+export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter basename="/saide">
@@ -45,4 +45,3 @@ function Landing() {
   );
 }
 
-export default App;
