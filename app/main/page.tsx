@@ -1,12 +1,14 @@
-import Navbar from "./Navbar";
-import SideMenu from "./SideMenu";
+'use client'
+import React from "react";
+import Navbar from "./navbar";
+import SideMenu from "./sideMenu";
 
 const files = {
     children: [
         { name: "empty_folder", children: [] },
         {
             name: "public",
-            children: [{ name: "index.html", name: "favorite.html" }]
+            children: [{ name: "index.html"}, {name: "favorite.html" }]
         },
         {
             name: "src",

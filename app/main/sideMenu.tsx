@@ -1,9 +1,9 @@
-import { useState, FC } from "react"
-import { SideMenuIcon } from "./MenuIcon"
+import React, { useState, FC } from "react"
+import { SideMenuIcon } from "./menuIcon"
 
 interface TreeNode{
     [key: string]: any,
-    children: TreeNode[]
+    children?: TreeNode[]
 }
 
 interface Props {
@@ -39,6 +39,6 @@ export default function SideMenu(props: Props) {
     const items = props.items
 
     return <div className="font-mono h-screen flex flex-col pt-2 ml-5 w-72 border-r border-r-zinc-700">
-        {items.children.map(item => <Item items={item} />)}
+        {items.children?.map(item => <Item items={item} />)}
     </div>
 }

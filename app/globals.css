@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+      @apply font-sans bg-background text-white;
+    }
+  }
+
+  @layer components {
+    .transition-ease {
+      @apply transition ease-in-out duration-200;
+    }
+
+    .btn {
+      @apply w-max inline-block text-blue cursor-pointer py-1.5 px-4
+      border border-solid border-blue rounded-md transition-ease
+      hover:bg-white hover:text-background hover:border-transparent;
+    }
+
+    .btn-primary {
+      @apply bg-blue text-background;
+    }
+  }
