@@ -1,3 +1,4 @@
+'use client'
 import { useRef } from 'react';
 import { Editor as MonacoEditor } from '@monaco-editor/react';
 import * as Y from 'yjs';
