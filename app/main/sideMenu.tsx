@@ -1,8 +1,9 @@
-import React, { useState, FC } from "react"
+import { useState, FC } from "react"
 import { SideMenuIcon } from "./menuIcon"
 
 interface TreeNode{
-    [key: string]: any,
+    [key: string]: string | TreeNode[] | undefined,
+    name?: string,
     children?: TreeNode[]
 }
 
@@ -28,7 +29,7 @@ const Item: FC<Props> = ({items}) => {
         }
         {items.children && (
             <div className={`sub-menu pl-6 ${isOpen ? "" : "hidden"}`} >
-                {items.children.map(subitem => <Item items={subitem} />)}
+                {items.children.map((subitem, i) => <Item key={i} items={subitem} />)}
             </div>
         )}
     </div>
@@ -39,6 +40,6 @@ export default function SideMenu(props: Props) {
     const items = props.items
 
     return <div className="font-mono h-screen flex flex-col pt-2 ml-5 w-72 border-r border-r-zinc-700">
-        {items.children?.map(item => <Item items={item} />)}
+        {items.children?.map((item, i) => <Item key={i} items={item} />)}
     </div>
 }
