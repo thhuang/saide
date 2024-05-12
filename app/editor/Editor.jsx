@@ -14,7 +14,7 @@ function Editor() {
     const doc = new Y.Doc();
     // const provider = new WebsocketProvider('wss://demos.yjs.dev', 'monaco-demo', doc);
     const provider = new WebsocketProvider(
-      'ws://127.0.0.1:13701',
+      'ws://<minikube-ip>/ws',
       'monaco-demo',
       doc,
     );
