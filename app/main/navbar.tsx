@@ -1,4 +1,3 @@
-import React from 'react';
 import TopMenuIcon from './menuIcon';
 
 export default function Navbar() {

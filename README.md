@@ -9,5 +9,17 @@ A Collaborative Online IDE
    ```sh
    npm i
    npm run dev
-   # The application is running at http://localhost:5173/
+   # The application is running at http://localhost:3000
+   ```
+
+### Docker
+
+1. Build the container:
+   ```sh
+   docker build -t saide .
+   ```
+2. Run the container:
+   ```sh
+   docker run -p 3000:3000 saide
+   # The application is running at http://localhost:3000
    ```
