@@ -12,9 +12,8 @@ function Editor() {
     editorRef.current = editor;
 
     const doc = new Y.Doc();
-    // const provider = new WebsocketProvider('wss://demos.yjs.dev', 'monaco-demo', doc);
     const provider = new WebsocketProvider(
-      'ws://<minikube-ip>/ws',
+      'http://127.0.0.1:13701',
       'monaco-demo',
       doc,
     );
@@ -33,7 +32,7 @@ function Editor() {
       height="100vh"
       width="100vw"
       theme="vs-dark"
-      defaultLanguage="cpp"
+      defaultLanguage="python"
       onMount={editorOnMount}
     />
   );
