@@ -15,7 +15,7 @@ function Editor() {
     const provider = new WebsocketProvider(
       'http://127.0.0.1:13701',
       'monaco-demo',
-      doc,
+      doc
     );
     const type = doc.getText('monaco');
 
@@ -23,7 +23,7 @@ function Editor() {
       type,
       editorRef.current.getModel(),
       new Set([editorRef.current]),
-      provider.awareness,
+      provider.awareness
     );
   }
 
