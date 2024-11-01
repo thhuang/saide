@@ -1,0 +1,11 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - crdt
+  crdt:
+    build: ./crdt
+    ports:
+      - "13701:80"
