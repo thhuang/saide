@@ -1,11 +1,18 @@
 services:
   web:
     build: ./web
-    ports:
-      - "3000:3000"
     depends_on:
       - crdt
+
   crdt:
     build: ./crdt
+
+  nginx:
+    image: nginx:latest
     ports:
-      - "13701:80"
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - crdt
+      - web

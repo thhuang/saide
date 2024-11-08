@@ -7,5 +7,5 @@
 
 ```sh
 docker build -t crdt-ws .
-docker run -p 127.0.0.1:13701:80 -it crdt-ws
+docker run -p 127.0.0.1:13701:13701 -it crdt-ws
 ```
