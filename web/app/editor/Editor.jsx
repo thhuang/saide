@@ -13,7 +13,7 @@ function Editor() {
 
     const doc = new Y.Doc();
     const provider = new WebsocketProvider(
-      'http://127.0.0.1:13701',
+      'http://127.0.0.1/ws/',
       '20241031204433',
       doc
     );

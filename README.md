@@ -10,6 +10,6 @@ A Collaborative Online IDE
     docker-compose up
     ```
 
-2. Access the web application at `http://localhost:3000`.
+2. Access the web application at `http://localhost`.
 
 For more details, please refer to the individual README files for [saide/crdt](./crdt/README.md) and [saide/web](./web/README.md).
